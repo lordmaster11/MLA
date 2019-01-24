@@ -1,0 +1,7 @@
+build/
+out/
+.idea/
+*.iml
+target/
+build/
+*.sw?
