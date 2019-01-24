@@ -5,3 +5,7 @@ out/
 target/
 build/
 *.sw?
+
+.classpath
+*.project
+.settings/
