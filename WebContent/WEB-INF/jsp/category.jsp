@@ -42,11 +42,21 @@
 	<H2 class="text-center">Lista de productos</H2>
 	<br>
 	
-	<div class="list-group">
-	<c:forEach var="producto" items="${category}">
-		<a href=${producto.get("permalink")} target="_blank" class="list-group-item list-group-item-action">${producto.get("title")}</a>
-	</c:forEach>		
-  	</div>
+	<div class="table-responsive">
+  	<table class="table table-hover table-bordered table table-striped table-dark">
+    <c:forEach var="producto" items="${category}">
+        <tr>
+            <td align="center">		
+            	<a href=${producto.get("permalink")} target="_blank" class="list-group-item list-group-item-action">
+            	    <img src=${producto.get("thumbnail")}>	
+            	</a>
+			</td>
+            <td>${producto.get("title")}</td>
+            <td style="text-align: right"><B>$ ${producto.get("price")}</B></td>
+        </tr>
+    </c:forEach>
+	</table>
+	</div>
 </div>
 </body>
 </html>
