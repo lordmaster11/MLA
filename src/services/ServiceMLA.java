@@ -32,11 +32,19 @@ public class ServiceMLA {
 		return getJSON("https://api.mercadolibre.com/sites/MLA/search?category=" + id + "&official_store_id=all");
 	}
 	
-	public JSONObject getObjectCategory(String id) throws IOException {
+	public ArrayList<JSONObject> getObjectCategory(String id) throws IOException {
 		String category = this.getCategory(id);
 		JSONObject object = new JSONObject(category);
 		
-		return object;	
+		JSONArray jsonArray = object.getJSONArray("results");
+		ArrayList<JSONObject> objects = new ArrayList<JSONObject>();
+		for(int i =0; i< jsonArray.length(); i++){
+            if(jsonArray.get(i) instanceof JSONObject){
+                JSONObject jsnObj = (JSONObject)jsonArray.get(i);
+                objects.add(jsnObj);
+            }
+        }
+		return objects;	
 	}
 	
 	

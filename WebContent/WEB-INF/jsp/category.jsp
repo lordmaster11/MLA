@@ -6,15 +6,12 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../resources/css/style.css"/>
-<link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.css"/>
 <link href="https://fonts.googleapis.com/css?family=Exo:800|Oswald:600" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-<script src="resources/js/bootstrap.js"></script>
-<script src="resources/js/myjs.js"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,19 +36,17 @@
     </ul>
   </div>
 </nav>
-</nav>
 <br>
 	
 <div class="container">
 	<H2 class="text-center">Lista de productos</H2>
 	<br>
 	
-  	<div class="list-group">
-	<c:forEach var="producto" items="${category.get('results')}">
-		<a class="list-group-item list-group-item-action">${producto.get("title")}</a>
+	<div class="list-group">
+	<c:forEach var="producto" items="${category}">
+		<a href=${producto.get("permalink")} target="_blank" class="list-group-item list-group-item-action">${producto.get("title")}</a>
 	</c:forEach>		
   	</div>
 </div>
-	
 </body>
 </html>
