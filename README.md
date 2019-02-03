@@ -52,3 +52,10 @@
 22. run on serve.
 
 
+## Configuración de ruta del server Toncat
+
+1. Dentro del archivo server.xml
+2. Borrar path="/MLAChallenger"
+3. Colocar path="/"
+
+![server-xml](https://user-images.githubusercontent.com/19752180/52183909-6eba1f00-27eb-11e9-82ff-68f916210dc7.png)
