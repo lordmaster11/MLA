@@ -52,7 +52,7 @@
 22. run on serve.
 
 
-## Configuración de ruta del server Toncat
+## Configuración de ruta del server Tomcat 8.5
 
 1. Dentro del archivo server.xml
 2. Borrar path="/MLAChallenger"
