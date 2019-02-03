@@ -59,3 +59,14 @@
 3. Colocar path="/"
 
 ![server-xml](https://user-images.githubusercontent.com/19752180/52183909-6eba1f00-27eb-11e9-82ff-68f916210dc7.png)
+
+
+## Visualización de los templates
+
+1. categories.jsp
+
+![categories](https://user-images.githubusercontent.com/19752180/52184010-a7a6c380-27ec-11e9-9558-898e20a07d26.png)
+
+2. category.jsp
+
+![category](https://user-images.githubusercontent.com/19752180/52184014-ad9ca480-27ec-11e9-96b1-0315556e9df8.png)
